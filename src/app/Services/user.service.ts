@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from "@angular/core";
-import { LoggerServive } from "../header/logger.service";
+import { LoggerService } from '../Services/logger.service';
 import { User } from "../Models/User";
 
 @Injectable()
@@ -10,7 +10,7 @@ export class UserService{
         new User('Mark Tyler','Male','Quarterly','Active'),
     ];
 
-    constructor(private logger: LoggerServive){}
+    constructor(private logger: LoggerService){}
 
     OnUserDetailsClicked: EventEmitter<User> = new EventEmitter<User>();
 
@@ -25,7 +25,7 @@ export class UserService{
     CreateUser(name: string,gender: string,subType: string,status: string){
         let user = new User(name,gender,subType,status);
         this.users.push(user);
-       // let logger= new LoggerServive();
+       // let logger= new LoggerService();
         this.logger.LogMessage(name,status)
     }
 }
