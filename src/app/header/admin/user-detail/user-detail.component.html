@@ -1,0 +1,13 @@
+<div class="user-detail-container">
+    <div>
+        <img class="user-detail-avatar-image" [src]="'./assets/images/'+selectedUser.gender.toLowerCase()+'-avatar.png'">
+    </div>
+    <div class="user-detail-info" >
+        <h2>User Detail</h2>
+        <p><b>Name:</b> {{this.selectedUser.name}}</p>
+        <p><b>Gender:</b> {{this.selectedUser.gender}}</p>
+        <p><b>Subscription Type:</b> {{this.selectedUser.subType}}</p>
+        <p><b>Status:</b> {{this.selectedUser.status}}</p>
+    </div>    
+</div>
+
